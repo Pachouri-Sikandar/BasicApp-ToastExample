@@ -1,16 +1,51 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".FirstActivity">
+    android:orientation="vertical">
 
     <TextView
-        android:text="@string/hello_world"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:id="@+id/textView"
+        android:autoText="false"
+        android:height="20dp"
+        android:textColor="#ff604eff"
+        android:textColorHighlight="#fffbff53"
+        android:textIsSelectable="false"
+        android:textSize="20dp"
+        android:typeface="monospace"
+        android:capitalize="none"
+        android:password="false"
+        android:phoneNumber="false"
+        android:singleLine="true"
+        android:layout_gravity="top"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp" />
 
-</RelativeLayout>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_gravity="top"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:hint="Enter Name" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:text="Toast"/>
+
+</LinearLayout>
+
+
+
+
