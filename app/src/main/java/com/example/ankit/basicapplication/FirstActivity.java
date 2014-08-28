@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-
 public class FirstActivity extends Activity {
 
     EditText etname;
@@ -25,24 +24,26 @@ public class FirstActivity extends Activity {
         final Context cont = getApplicationContext();
         final int duration = Toast.LENGTH_SHORT;
 
-
-
-
-
         btntoast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String name = etname.getText().toString();
+                //putting validation if the user does not enter text in EditText and clicks on Button
 
-
-                tt = Toast.makeText(cont, "Hello, "+name, duration);
-                tt.show();
+                if(name.equals(""))
+                {
+                    tt = Toast.makeText(cont, "*Field cannot be left blank", duration);
+                    tt.show();
+                }
+                else
+                {
+                    tt = Toast.makeText(cont, "Hello, "+name, duration);
+                    tt.show();
+                }
 
             }
         });
 
-
     }
-
 
 }
